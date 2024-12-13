@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load cache %}
+{% load static %}
+{% block title %}Посты{% endblock title %}
+{% block body %}
+    <h1>
+        значит смари вот посты какие я надобавлял
+    </h1>
+    <p>
+        {% for post in page_obj %}
+            {% include 'includes/post.html' %}
+        {% endfor %}
+    </p>
+{% endblock body %}
